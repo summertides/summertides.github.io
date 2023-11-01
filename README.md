@@ -1,4 +1,4 @@
-# FBLA Website
+# Current Project; Clarkston HS - 11th Grade
 A website for FBLA, source code private.
 
 ## Description
