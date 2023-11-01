@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+}
+
+#logo {
+    position: fixed;
+    left: -12%; top: -28%;
+
+    transform: scale(0.15);
+}
