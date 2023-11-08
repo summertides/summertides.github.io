@@ -11,13 +11,36 @@
         <link href="./style/main/style.css" type="text/css" rel="stylesheet">
 
         <!-- Scripts -->
+        <script defer src="./scripts/main/script.js"></script>
     </head>
 
-    <body>
+    <body data-navigation="false">
+        <!-- Logo -->
         <img id="logo" src="./assets/images/logo.png">
 
-        <main>
+        <!-- Nav Button -->
+        <div onclick="toggleMenu()" class="menu-toggle">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="cross">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
 
+        <!-- Navigation Menu -->
+        <nav>
+            <div id="nav-bg">
+
+            </div>
+            <div id="nav-backdrop"></div>
+        </nav>
+
+        <main>
+            <img id="heroBanner" src="./assets/images/asd.png">
         </main>
     </body>
 </html>
