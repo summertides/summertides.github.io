@@ -12,14 +12,15 @@
 
         <!-- Scripts -->
         <script defer src="./scripts/main/script.js"></script>
+        <script defer src="./scripts/global/script.js"></script>
     </head>
 
-    <body data-navigation="false">
+    <body data-nav="false">
         <!-- Logo -->
         <img id="logo" src="./assets/images/logo.png">
 
         <!-- Nav Button -->
-        <div onclick="toggleMenu()" class="menu-toggle">
+        <div class="menu-toggle">
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -36,7 +37,7 @@
             <div id="nav-bg">
 
             </div>
-            <div id="nav-backdrop"></div>
+            <div onclick="toggleNav()" id="nav-backdrop"></div>
         </nav>
 
         <main>

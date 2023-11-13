@@ -105,21 +105,54 @@ body {
     transform:translateY(-50%) rotate(-45deg) scaleX(1);
 }
 
-#nav-bg[data-navigation="true"] {
+#nav-bg {
     position: fixed;
     width: 85%; height: 50%;
     left: 50%; top: 0.75rem;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0) scale(0.96);
 
     background-color: white;
     border-radius: 10px;
 
+    opacity: 0;
+
+    z-index: 99;
+
+    transition: 0.5s ease;
+}
+
+#nav-backdrop {
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 98;
+
+    pointer-events: none;
+
+    transition: 0.5s ease;
+}
+
+body[data-nav="true"] #nav-bg {
+    position: fixed;
+    width: 85%; height: 50%;
+    left: 50%; top: 0.75rem;
+    transform: translate(-50%, 0) scale(1);
+
+    background-color: white;
+    border-radius: 10px;
+
+    opacity: 1;
+
     z-index: 99;
 }
 
-#nav-backdrop[data-navigation="true"] {
+body[data-nav="true"] #nav-backdrop {
     position: fixed;
     width: 100%; height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 98;
+
+    pointer-events: auto;
+
+    backdrop-filter: blur(5px);
 }
