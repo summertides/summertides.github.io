@@ -53,11 +53,11 @@ body {
 }
 
 .menu-toggle{
-    width:48px;
-    height:48px;
+    width:5vh;
+    height:5vh;
     cursor:pointer;
     position:fixed;
-    right: 4.2rem; top: 2rem;
+    right: 8vw; top: 5vh;
 
     border-radius: 50%;
     background-color: white;
@@ -66,8 +66,8 @@ body {
 
 #logo {
     position: fixed;
-    width: 64px; height: 64px;
-    left: 3.6rem; top: 1.6rem;
+    width: 7vh; height: 7vh;
+    left: 6vw; top: 4.2vh;
 
     pointer-events: auto;
 
@@ -163,7 +163,7 @@ body {
 #nav-bg {
     position: fixed;
     width: 9.15vw; height: 7.35vh;
-    right: 4rem; top: 2rem;
+    right: 7vw; top: 4vh;
     background-color: white;
 
     transform-origin: center;
@@ -194,7 +194,7 @@ body[data-nav="true"] #nav-bg {
 #nav-tooltip {
     position: fixed;
     
-    right: 9vw; top: 5.8vh;
+    right: 11vw; top: 4.6vh;
     z-index: 100;
 
     font-family: 'Harmond';
@@ -356,6 +356,7 @@ body[data-nav="true"] #nav-hlnews-wrap {
 #nav-hlnews {
     position: relative;
     width: 30vw; height: 60vh;
+    object-fit: contain;
 
     left: 50vw;
 
