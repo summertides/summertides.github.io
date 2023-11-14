@@ -1,3 +1,41 @@
+@font-face {
+    font-family: 'Harmond';
+    src: url('../../assets/fonts/Harmond-SemiBoldCondensed.woff2') format('woff2'),
+        url('../../assets/fonts/Harmond-SemiBoldCondensed.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Harmond';
+    src: url('../../assets/fonts/Harmond-ExtraBoldExpanded.woff2') format('woff2'),
+        url('../../assets/fonts/Harmond-ExtraBoldExpanded.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Harmond';
+    src: url('../../assets/fonts/Harmond-SemBdItaCond.woff2') format('woff2'),
+        url('../../assets/fonts/Harmond-SemBdItaCond.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Harmond';
+    src: url('../../assets/fonts/Harmond-ExtBdItaExp.woff2') format('woff2'),
+        url('../../assets/fonts/Harmond-ExtBdItaExp.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
+
 *::-webkit-scrollbar {
     display: none;
 }  
@@ -9,6 +47,9 @@
 
 body {
     margin: 0;
+
+    background-color: #4e4c4f;
+    overflow-x: hidden;
 }
 
 .menu-toggle{
@@ -16,7 +57,7 @@ body {
     height:48px;
     cursor:pointer;
     position:fixed;
-    right: 6rem; top: 2rem;
+    right: 4.2rem; top: 2rem;
 
     border-radius: 50%;
     background-color: white;
@@ -26,11 +67,12 @@ body {
 #logo {
     position: fixed;
     width: 64px; height: 64px;
-    left: 5.6rem; top: 1.6rem;
+    left: 3.6rem; top: 1.6rem;
+
+    pointer-events: auto;
 
     z-index: 100;
     filter: brightness(500%);
-    mix-blend-mode: difference;
 }
 
 .hamburger,.cross{
@@ -120,52 +162,238 @@ body {
 
 #nav-bg {
     position: fixed;
-    width: 90vw; height: 50%;
-    left: 50%; top: 0.75rem;
-    transform: translate(-50%, 0) scale(0.96);
-
+    width: 9.15vw; height: 7.35vh;
+    right: 4rem; top: 2rem;
     background-color: white;
-    border-radius: 10px;
 
-    opacity: 0;
+    transform-origin: center;
 
+    border-radius: 40px;
+
+    opacity: 1;
     z-index: 99;
+    transition: 0.85s ease;
+    transition-delay: 1s;
 
-    transition: 0.5s ease;
-}
-
-#nav-backdrop {
-    position: fixed;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: 98;
-
-    pointer-events: none;
-
-    transition: 0.5s ease;
+    overflow: hidden;
 }
 
 body[data-nav="true"] #nav-bg {
     position: fixed;
-    width: 90vw; height: 50%;
-    left: 50%; top: 0.75rem;
-    transform: translate(-50%, 0) scale(1);
 
-    background-color: white;
-    border-radius: 10px;
+    transform-origin: center;
+    transform: scale(30);
 
-    opacity: 1;
+    border-radius: 0px;
 
-    z-index: 99;
+    background-color: #9f8d8d;
+
+    transition-delay: 0s;
 }
 
-body[data-nav="true"] #nav-backdrop {
+#nav-tooltip {
     position: fixed;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 98;
+    
+    right: 9vw; top: 5.8vh;
+    z-index: 100;
 
+    font-family: 'Harmond';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    font-size: 2vh;
+
+    transition: 0.5s ease;
+}
+
+body[data-nav="true"] #nav-tooltip {
+    color: white;
+}
+
+#nav-opt-wrap {
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column;
+
+    padding-left: 5vw;
+
+    z-index: 100;
+
+    pointer-events: none;
+}
+
+body[data-nav="true"] #nav-opt-wrap {
     pointer-events: auto;
+}
 
-    backdrop-filter: blur(5px);
+.nav-opts {
+    position: relative;
+
+    font-family: 'Harmond';
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    font-size: 9vh;
+    text-decoration: none;
+
+    color: white;
+
+    z-index: 100;
+}
+
+#nav1 {
+    left: -30%;
+    transition: 0.7s ease;
+    transition-delay: 0s;
+}
+
+body[data-nav="true"] #nav1 {
+    left: 0;
+    transition-delay: 0.5s;
+}
+
+#nav2 {
+    left: -30%;
+    transition: 0.7s ease;
+    transition-delay: 0.1s;
+}
+
+body[data-nav="true"] #nav2 {
+    left: 0;
+    transition-delay: 0.6s;
+}
+
+#nav3 {
+    left: -30%;
+    transition: 0.7s ease;
+    transition-delay: 0.2s;
+}
+
+body[data-nav="true"] #nav3 {
+    left: 0;
+    transition-delay: 0.7s;
+}
+
+#nav4 {
+    left: -30%;
+    transition: 0.7s ease;
+    transition-delay: 0.3s;
+}
+
+body[data-nav="true"] #nav4 {
+    left: 0;
+    transition-delay: 0.8s;
+}
+
+#nav5 {
+    left: -30%;
+    transition: 0.7s ease;
+    transition-delay: 0.4s;
+}
+
+body[data-nav="true"] #nav5 {
+    left: 0;
+    transition-delay: 0.9s;
+}
+
+#nav6 {
+    left: -30%;
+    transition: 0.7s ease;
+    transition-delay: 0.5s;
+}
+
+body[data-nav="true"] #nav6 {
+    left: 0;
+    transition-delay: 1s;
+}
+
+#nav-hlnews-wrap {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.05);
+
+    width: 100%; height: 300%;
+    left: 110%; top: 50%;
+
+    transform: translate(0, -50%);
+
+    pointer-events: none;
+    border-radius: 0%;
+
+    transition: 1s ease;
+    transition-delay: 0.6s;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column;
+
+    z-index: 101;
+}
+
+body[data-nav="true"] #nav-hlnews-wrap {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.05);
+
+    width: 100%; height: 300%;
+    left: 35%; top: 50%;
+
+    transform: translate(0, -50%);
+
+    pointer-events: none;
+    border-radius: 50%;
+
+    transition-delay: 0.6s;
+
+    z-index: 101;
+}
+
+#nav-hlnews {
+    position: relative;
+    width: 30vw; height: 60vh;
+
+    left: 50vw;
+
+    border-radius: 30px;
+
+    transition: 1s ease;
+    transition-delay: 0.4s;
+
+    background-image: url('https://www.zillihospitalitygroup.com/wp-content/uploads/2017/09/Corporate-Galas-in-Milwaukee.jpg');
+}
+
+body[data-nav="true"] #nav-hlnews {
+    left: 10vw;
+
+    transition-delay: 1s;
+}
+
+#nav-hlnews-prompt {
+    position: absolute;
+
+    bottom: 2vh; right: 1vw;
+
+    width: 16vw; height: 6vh;
+    background-color: white;
+
+    border-radius: 10vh;
+}
+
+#nav-hlnews-ptxt {
+    position: absolute;
+    left: 1vw; top: 20%;
+    transform: translate(0, -50%);
+
+    font-family: 'Harmond';
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    font-size: 2vh;
+    text-decoration: none;
+    text-align: right;
 }

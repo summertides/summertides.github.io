@@ -17,7 +17,9 @@
 
     <body data-nav="false">
         <!-- Logo -->
-        <img id="logo" src="./assets/images/logo.png">
+        <a href="nonprofit.html">
+            <img id="logo" src="./assets/images/logo.png">
+        </a>
 
         <!-- Nav Button -->
         <div class="menu-toggle">
@@ -33,15 +35,37 @@
         </div>
 
         <!-- Navigation Menu -->
-        <nav>
-            <div id="nav-bg">
+        <nav data-navselect="home">
+            <p id="nav-tooltip">MENU</p>
+            <div id="nav-bg"></div>
+
+            <nav id="nav-opt-wrap">
+
+                <a class="nav-opts" id="nav1" href="#">Home</a>
+                <a class="nav-opts" id="nav2" href="#">About</a>
+                <a class="nav-opts" id="nav3" href="#">Services</a>
+                <a class="nav-opts" id="nav4" href="#">Journal</a>
+                <a class="nav-opts" id="nav5" href="#">Join us</a>
+                <a class="nav-opts" id="nav6" href="#">Contact</a>
+
+            </nav>
+
+            <div id="nav-hlnews-wrap">
+
+                <div id="nav-hlnews">
+                    <div id="nav-hlnews-prompt">
+                        <p id="nav-hlnews-ptxt">Nurture Gala 2023</p>
+                    </div>
+                </div>
 
             </div>
-            <div onclick="toggleNav()" id="nav-backdrop"></div>
+
         </nav>
 
         <main>
-            <div id="heroBg"></div>
+            <div id="heroBg">
+                <img id="heroDecor" src="./assets/images/doodle.png">
+            </div>
             <h1 id="heroTitle">NURTURE</h1>
 
             <img id="heroBanner" src="https://dmn-dallas-news-prod.cdn.arcpublishing.com/resizer/KZI6SxJSIKreygTpm2A60N6Oza4=/830x553/smart/filters:no_upscale()/cloudfront-us-east-1.images.arcpublishing.com/dmn/CEPCXDM5SRFUNAGMSP2LG24WH4.jpg">
