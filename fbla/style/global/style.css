@@ -1,23 +1,36 @@
+*::-webkit-scrollbar {
+    display: none;
+}  
+
+* {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
 body {
     margin: 0;
 }
 
 .menu-toggle{
-    width:64px;
-    height:64px;
+    width:48px;
+    height:48px;
     cursor:pointer;
     position:fixed;
-    right: 7rem; top: 1.2rem;
+    right: 6rem; top: 2rem;
 
+    border-radius: 50%;
+    background-color: white;
     z-index:101;
 }
 
 #logo {
     position: fixed;
     width: 64px; height: 64px;
-    left: 7rem; top: 1.2rem;
+    left: 5.6rem; top: 1.6rem;
 
     z-index: 100;
+    filter: brightness(500%);
+    mix-blend-mode: difference;
 }
 
 .hamburger,.cross{
@@ -107,7 +120,7 @@ body {
 
 #nav-bg {
     position: fixed;
-    width: 85%; height: 50%;
+    width: 90vw; height: 50%;
     left: 50%; top: 0.75rem;
     transform: translate(-50%, 0) scale(0.96);
 
@@ -134,7 +147,7 @@ body {
 
 body[data-nav="true"] #nav-bg {
     position: fixed;
-    width: 85%; height: 50%;
+    width: 90vw; height: 50%;
     left: 50%; top: 0.75rem;
     transform: translate(-50%, 0) scale(1);
 

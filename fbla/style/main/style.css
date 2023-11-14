@@ -1,9 +1,53 @@
+@font-face {
+    font-family: 'Harmond';
+    src: url('../../assets/fonts/Harmond-SemiBoldCondensed.woff2') format('woff2'),
+        url('../../assets/fonts/Harmond-SemiBoldCondensed.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Harmond';
+    src: url('../../assets/fonts/Harmond-ExtraBoldExpanded.woff2') format('woff2'),
+        url('../../assets/fonts/Harmond-ExtraBoldExpanded.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Harmond';
+    src: url('../../assets/fonts/Harmond-SemBdItaCond.woff2') format('woff2'),
+        url('../../assets/fonts/Harmond-SemBdItaCond.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Harmond';
+    src: url('../../assets/fonts/Harmond-ExtBdItaExp.woff2') format('woff2'),
+        url('../../assets/fonts/Harmond-ExtBdItaExp.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+#heroBg {
+    position: absolute;
+    width: 100%; height: 80vh;
+    background-color: rgb(12, 12, 12);
+}
+
 #heroBanner {
     position: absolute;
-    width: 50%; height: 60%;
+    width: 80rem; height: 80%;
     object-fit: cover;
+    object-position: 0px 0px;
 
-    left: 12rem; top: 1.9rem;
+    left: 50%; top: 50rem;
+    transform: translate(-50%, 0);
 
     border-radius: 20px;
 
@@ -13,25 +57,15 @@
     animation: fadeInScaleDown 2.5s ease forwards;
 }
 
-@keyframes fadeInScaleDown {
-    0% {
-        width: 72.5%; height: 60%;
-        left: 12rem; top: 10rem;
-        opacity: 0;
-    }
+#heroTitle {
+    position: absolute;
+    left: 5vw; top: 10vh;
 
-    15% {
-        opacity: 0;
-    }
+    color: white;
 
-    50% {
-        top: 1.9rem;
-        width: 72.5%;
-    }
-
-    100% {
-        width: 50%; height: 60%;
-        left: 12rem; top: 1.9rem;
-        opacity: 1;
-    }
+    font-family: 'Harmond';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    font-size: 15vh;
 }
