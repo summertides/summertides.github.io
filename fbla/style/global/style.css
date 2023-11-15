@@ -36,6 +36,72 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
 
+html.has-scroll-smooth {
+    overflow: hidden; }
+  
+html.has-scroll-dragging {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  
+.has-scroll-smooth body {
+    overflow: hidden; }
+  
+.has-scroll-smooth [data-scroll-container] {
+    min-height: 100vh; }
+  
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+    height: 100vh;
+    display: inline-block;
+    white-space: nowrap; }
+  
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    height: 100%; }
+  
+.c-scrollbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 11px;
+    height: 100%;
+    transform-origin: center right;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0; }
+.c-scrollbar:hover {
+    transform: scaleX(1.45); }
+.c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+    opacity: 1; }
+[data-scroll-direction="horizontal"] .c-scrollbar {
+      width: 100%;
+      height: 10px;
+      top: auto;
+      bottom: 0;
+      transform: scaleY(1); }
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+        transform: scaleY(1.3); }
+  
+.c-scrollbar_thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+    width: 7px;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: -webkit-grab;
+    cursor: grab; }
+.has-scroll-dragging .c-scrollbar_thumb {
+      cursor: -webkit-grabbing;
+      cursor: grabbing; }
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+      right: auto;
+      bottom: 0; }
+
 *::-webkit-scrollbar {
     display: none;
 }  
@@ -48,7 +114,7 @@
 body {
     margin: 0;
 
-    background-color: #4e4c4f;
+    background-color: #113946;
     overflow-x: hidden;
 }
 
@@ -172,7 +238,7 @@ body {
 
     opacity: 1;
     z-index: 99;
-    transition: 0.85s ease;
+    transition: 0.85s cubic-bezier(0.77, 0, 0.175, 1);
     transition-delay: 1s;
 
     overflow: hidden;
@@ -186,7 +252,7 @@ body[data-nav="true"] #nav-bg {
 
     border-radius: 0px;
 
-    background-color: #9f8d8d;
+    background-color: #BCA37F;
 
     transition-delay: 0s;
 }
@@ -249,73 +315,79 @@ body[data-nav="true"] #nav-opt-wrap {
 
 #nav1 {
     left: -30%;
-    transition: 0.7s ease;
+    transition: 0.7s cubic-bezier(1,0,.34,.5);
     transition-delay: 0s;
 }
 
 body[data-nav="true"] #nav1 {
     left: 0;
+    transition: 0.7s cubic-bezier(.21,.62,.23,.96);
     transition-delay: 0.5s;
 }
 
 #nav2 {
     left: -30%;
-    transition: 0.7s ease;
+    transition: 0.7s cubic-bezier(1,0,.34,.5);
     transition-delay: 0.1s;
 }
 
 body[data-nav="true"] #nav2 {
     left: 0;
+    transition: 0.7s cubic-bezier(.21,.62,.23,.96);
     transition-delay: 0.6s;
 }
 
 #nav3 {
     left: -30%;
-    transition: 0.7s ease;
+    transition: 0.7s cubic-bezier(1,0,.34,.5);
     transition-delay: 0.2s;
 }
 
 body[data-nav="true"] #nav3 {
     left: 0;
+    transition: 0.7s cubic-bezier(.21,.62,.23,.96);
     transition-delay: 0.7s;
 }
 
 #nav4 {
     left: -30%;
-    transition: 0.7s ease;
+    transition: 0.7s cubic-bezier(1,0,.34,.5);
     transition-delay: 0.3s;
 }
 
 body[data-nav="true"] #nav4 {
     left: 0;
+    transition: 0.7s cubic-bezier(.21,.62,.23,.96);
     transition-delay: 0.8s;
 }
 
 #nav5 {
     left: -30%;
-    transition: 0.7s ease;
+    transition: 0.7s cubic-bezier(1,0,.34,.5);
     transition-delay: 0.4s;
 }
 
 body[data-nav="true"] #nav5 {
     left: 0;
+    transition: 0.7s cubic-bezier(.21,.62,.23,.96);
     transition-delay: 0.9s;
 }
 
 #nav6 {
     left: -30%;
-    transition: 0.7s ease;
+    transition: 0.7s cubic-bezier(1,0,.34,.5);
     transition-delay: 0.5s;
 }
 
 body[data-nav="true"] #nav6 {
     left: 0;
+    transition: 0.7s cubic-bezier(.21,.62,.23,.96);
     transition-delay: 1s;
 }
 
 #nav-hlnews-wrap {
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: transparent;
 
     width: 100%; height: 300%;
     left: 110%; top: 50%;
@@ -325,7 +397,7 @@ body[data-nav="true"] #nav6 {
     pointer-events: none;
     border-radius: 0%;
 
-    transition: 1s ease;
+    transition: 1s cubic-bezier(1,0,.34,.5);
     transition-delay: 0.6s;
 
     display: flex;
@@ -338,7 +410,7 @@ body[data-nav="true"] #nav6 {
 
 body[data-nav="true"] #nav-hlnews-wrap {
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: transparent;
 
     width: 100%; height: 300%;
     left: 35%; top: 50%;
@@ -348,6 +420,7 @@ body[data-nav="true"] #nav-hlnews-wrap {
     pointer-events: none;
     border-radius: 50%;
 
+    transition: 1s cubic-bezier(.21,.62,.23,.96);
     transition-delay: 0.6s;
 
     z-index: 101;
@@ -361,16 +434,20 @@ body[data-nav="true"] #nav-hlnews-wrap {
     left: 50vw;
 
     border-radius: 30px;
+    border-color: white;
+    border-style: solid;
+    border-width: 5px;
 
-    transition: 1s ease;
+    transition: 1s cubic-bezier(1,0,.34,.5);
     transition-delay: 0.4s;
-
+    
     background-image: url('https://www.zillihospitalitygroup.com/wp-content/uploads/2017/09/Corporate-Galas-in-Milwaukee.jpg');
 }
 
 body[data-nav="true"] #nav-hlnews {
     left: 10vw;
 
+    transition: 1s cubic-bezier(.21,.62,.23,.96);
     transition-delay: 1s;
 }
 
@@ -379,7 +456,7 @@ body[data-nav="true"] #nav-hlnews {
 
     bottom: 2vh; right: 1vw;
 
-    width: 16vw; height: 6vh;
+    width: 12vw; height: 6vh;
     background-color: white;
 
     border-radius: 10vh;
@@ -397,4 +474,15 @@ body[data-nav="true"] #nav-hlnews {
     font-size: 2vh;
     text-decoration: none;
     text-align: right;
+}
+
+#nav-decor {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+
+    filter: invert(100%);
+    transform: scale(1) translate(-5%, -19%) rotate(270deg);
+
+    opacity: 20%;
 }

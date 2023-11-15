@@ -9,6 +9,7 @@
         <!-- Stylesheets -->
         <link href="./style/global/style.css" type="text/css" rel="stylesheet">
         <link href="./style/main/style.css" type="text/css" rel="stylesheet">
+        <link href="./style/global/locomotivescroll.css" type="text/css" rel="stylesheet"> 
 
         <!-- Scripts -->
         <script defer src="./scripts/main/script.js"></script>
@@ -16,6 +17,17 @@
     </head>
 
     <body data-nav="false">
+        <!-- Locomotive Scrolling -->
+        <script defer src="./scripts/global/locomotivescroll.js"></script>
+        <script>
+            (function () {
+                var scroll = new LocomotiveScroll({
+                    el: document.querySelector('[data-scroll-container]'),
+                    smooth: true
+                });
+            })();
+        </script>
+
         <!-- Logo -->
         <a href="nonprofit.html">
             <img id="logo" src="./assets/images/logo.png">
@@ -51,6 +63,7 @@
             </nav>
 
             <div id="nav-hlnews-wrap">
+                <img src="./assets/images/doodle.png" id="nav-decor">
 
                 <div id="nav-hlnews">
                     <div id="nav-hlnews-prompt">
@@ -62,11 +75,11 @@
 
         </nav>
 
-        <main>
-            <div id="heroBg">
-                <img id="heroDecor" src="./assets/images/doodle.png">
-            </div>
-            <h1 id="heroTitle">NURTURE</h1>
+        <main data-scroll-container>
+            <div id="heroBg"></div>
+            <h1 id="heroTitle" data-scroll>NURTURE</h1>
+            <h1 id="heroTitle2" data-scroll>FOOD FOR LIFE</h1>
+            <h2 id="heroMotto" data-scroll>Fighting hunger, feeding hope</h2>
 
             <img id="heroBanner" src="https://dmn-dallas-news-prod.cdn.arcpublishing.com/resizer/KZI6SxJSIKreygTpm2A60N6Oza4=/830x553/smart/filters:no_upscale()/cloudfront-us-east-1.images.arcpublishing.com/dmn/CEPCXDM5SRFUNAGMSP2LG24WH4.jpg">
         </main>
