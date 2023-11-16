@@ -1,0 +1,146 @@
+@font-face {
+  font-family: Harmond;
+  src: url("Harmond-SemiBoldCondensed.50f2bb66.woff2") format("woff2"), url("Harmond-SemiBoldCondensed.6cd5e30b.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Harmond;
+  src: url("Harmond-ExtraBoldExpanded.e7b0e5a3.woff2") format("woff2"), url("Harmond-ExtraBoldExpanded.0d7bd8cd.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Harmond;
+  src: url("Harmond-SemBdItaCond.9fe94942.woff2") format("woff2"), url("Harmond-SemBdItaCond.2d8f9254.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Harmond;
+  src: url("Harmond-ExtBdItaExp.3d3f842f.woff2") format("woff2"), url("Harmond-ExtBdItaExp.b021af77.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+#heroBg {
+  opacity: .5;
+  background-image: url("restaurant-breakfast.ec4946c3.jpg");
+  background-position: 0%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 40px;
+  width: 75vw;
+  height: 70vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+
+#heroBanner {
+  object-fit: cover;
+  object-position: 0px 0px;
+  z-index: 2;
+  filter: drop-shadow(1px 1px 20px #00000080);
+  border-radius: 40px;
+  width: 80rem;
+  height: 80%;
+  animation: 2.5s forwards fadeInScaleDown;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#heroTitle {
+  color: #fff;
+  font-display: swap;
+  font-family: Harmond;
+  font-size: 20vh;
+  font-style: normal;
+  font-weight: 700;
+  position: absolute;
+  top: 10vh;
+  left: 5vw;
+}
+
+#heroTitle2 {
+  color: #fff;
+  font-display: swap;
+  font-family: Harmond;
+  font-size: 15vh;
+  font-style: normal;
+  font-weight: 700;
+  position: absolute;
+  top: 33vh;
+  right: 5vw;
+}
+
+#heroMotto {
+  font-display: swap;
+  color: #fff;
+  font-family: Harmond;
+  font-size: 4vh;
+  font-style: italic;
+  font-weight: 700;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#scrollButton {
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 50vh;
+  height: 50vh;
+  transition: all .5s;
+  position: absolute;
+  top: 65vh;
+  right: 2vw;
+  overflow: hidden;
+}
+
+#scrollButton:hover {
+  transform: scale(.8)rotate(15deg);
+}
+
+#scrollButton:hover > #scrollButtonHoverCircle {
+  top: 0%;
+  left: 0%;
+}
+
+#scrollButtonHoverCircle {
+  pointer-events: none;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 50vh;
+  height: 50vh;
+  transition: all .5s;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+}
+
+#scrollArrow {
+  mix-blend-mode: difference;
+  font-size: 15vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=nonprofit.371c55ff.css.map */
