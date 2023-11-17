@@ -254,7 +254,33 @@ body[data-navigation="true"] #nav-tooltip {
     transition-delay: 0.2s;
 }
 
+#nav-opt-journal-wrap {
+    position: fixed;
+    left: 0%;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column;
+
+    padding-left: 5vw;
+    opacity: 0;
+
+    z-index: 100;
+
+    pointer-events: none;
+    transition: 0.7s cubic-bezier(.21,.62,.23,.96);
+    transition-delay: 0.2s;
+}
+
 body[data-selection="services"] #nav-opt-services-wrap {
+    opacity: 1;
+}
+
+body[data-selection="journal"] #nav-opt-journal-wrap {
     opacity: 1;
 }
 
@@ -274,6 +300,51 @@ body[data-selection="services"] #nav-opt-services-wrap {
 
     pointer-events: none;
     cursor: pointer;
+}
+
+#nav-j1 {
+    left: -50%;
+    transition: 0.7s cubic-bezier(1,0,.34,.5);
+    transition-delay: 0s;
+    pointer-events: auto;
+}
+
+body[data-selection="journal"] #nav-j1 {
+    left: 0;
+    transition: 0.7s cubic-bezier(.21,.62,.23,.96);
+    transition-delay: 0.5s;
+}
+
+#nav-j2 {
+    left: -50%;
+    transition: 0.7s cubic-bezier(1,0,.34,.5);
+    transition-delay: 0.1s;
+    pointer-events: auto;
+}
+
+body[data-selection="journal"] #nav-j2 {
+    left: 0;
+    transition: 0.7s cubic-bezier(.21,.62,.23,.96);
+    transition-delay: 0.5s;
+}
+
+#nav-j3 {
+    left: -50%;
+    transition: 0.7s cubic-bezier(1,0,.34,.5);
+    transition-delay: 0.2s;
+    pointer-events: auto;
+}
+
+body[data-selection="journal"] #nav-j3 {
+    left: 0;
+    transition: 0.7s cubic-bezier(.21,.62,.23,.96);
+    transition-delay: 0.5s;
+}
+
+.nav-x {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%)
 }
 
 body:not([data-selection="home"]) .nav-back {
@@ -489,7 +560,9 @@ body[data-navigation="true"] #nav-hlnews-wrap {
     transition: 1s cubic-bezier(1,0,.34,.5);
     transition-delay: 0.4s;
     
-    background-image: url('https://www.zillihospitalitygroup.com/wp-content/uploads/2017/09/Corporate-Galas-in-Milwaukee.jpg');
+    background-image: url('assets/images/galathumbnail.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body[data-navigation="true"] #nav-hlnews {
@@ -533,4 +606,26 @@ body[data-navigation="true"] #nav-hlnews {
     transform: scale(1) translate(-5%, -19%) rotate(270deg);
 
     opacity: 20%;
+}
+
+footer {
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 300%; height: 90vh;
+
+    right: 50%; bottom: -430vh;
+    transform: translate(50%, 0);
+    border-radius: 50% 50% 0% 0%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column;
+
+    padding-left: 5vw;
+
+    z-index: 0;
+
+    pointer-events: none;
 }
