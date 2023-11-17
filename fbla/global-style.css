@@ -245,16 +245,22 @@ body[data-navigation="true"] #nav-tooltip {
     flex-flow: column;
 
     padding-left: 5vw;
+    opacity: 0;
 
     z-index: 100;
 
     pointer-events: none;
     transition: 0.7s cubic-bezier(.21,.62,.23,.96);
+    transition-delay: 0.2s;
+}
+
+body[data-selection="services"] #nav-opt-services-wrap {
+    opacity: 1;
 }
 
 .nav-back {
     position: relative;
-    left: 5vw; top: 5%;
+    left: -5vw; top: 5%;
     width: 6vh; height: 6vh;
 
     background-color: white;
@@ -263,7 +269,8 @@ body[data-navigation="true"] #nav-tooltip {
     border-radius: 50%;
 
     z-index: 102;
-    transition: 0.7s cubic-bezier(1,0,.34,.5);
+    transition: 0.4s cubic-bezier(1,0,.34,.5);
+    transition-delay: 0s;
 
     pointer-events: none;
     cursor: pointer;
@@ -274,6 +281,7 @@ body:not([data-selection="home"]) .nav-back {
     opacity: 1;
     pointer-events: auto;
     transition: 0.7s cubic-bezier(.21,.62,.23,.96);
+    transition-delay: 0.5s;
 }
 
 body[data-navigation="true"] #nav-opt-wrap {
@@ -283,12 +291,14 @@ body[data-navigation="true"] #nav-opt-wrap {
 body:not([data-selection="home"]) #nav-opt-wrap {
     left: -50%;
     transition: 0.7s cubic-bezier(1,0,.34,.5);
+    pointer-events: none;
 }
 
 #nav-s1 {
     left: -50%;
     transition: 0.7s cubic-bezier(1,0,.34,.5);
     transition-delay: 0s;
+    pointer-events: auto;
 }
 
 body[data-selection="services"] #nav-s1 {
@@ -300,7 +310,8 @@ body[data-selection="services"] #nav-s1 {
 #nav-s2 {
     left: -50%;
     transition: 0.7s cubic-bezier(1,0,.34,.5);
-    transition-delay: 0s;
+    transition-delay: 0.1s;
+    pointer-events: auto;
 }
 
 body[data-selection="services"] #nav-s2 {
@@ -312,7 +323,8 @@ body[data-selection="services"] #nav-s2 {
 #nav-s3 {
     left: -50%;
     transition: 0.7s cubic-bezier(1,0,.34,.5);
-    transition-delay: 0s;
+    transition-delay: 0.2s;
+    pointer-events: auto;
 }
 
 body[data-selection="services"] #nav-s3 {
@@ -324,7 +336,8 @@ body[data-selection="services"] #nav-s3 {
 #nav-s4 {
     left: -50%;
     transition: 0.7s cubic-bezier(1,0,.34,.5);
-    transition-delay: 0s;
+    transition-delay: 0.3s;
+    pointer-events: auto;
 }
 
 body[data-selection="services"] #nav-s4 {
