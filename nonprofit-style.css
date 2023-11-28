@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Harmond';
+    src: url('assets/fonts/Harmond-SemiBoldCondensed.woff2') format('woff2'),
+        url('assets/fonts/Harmond-SemiBoldCondensed.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Harmond';
+    src: url('assets/fonts/Harmond-ExtraBoldExpanded.woff2') format('woff2'),
+        url('assets/fonts/Harmond-ExtraBoldExpanded.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Harmond';
+    src: url('assets/fonts/Harmond-SemBdItaCond.woff2') format('woff2'),
+        url('assets/fonts/Harmond-SemBdItaCond.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Harmond';
+    src: url('assets/fonts/Harmond-ExtBdItaExp.woff2') format('woff2'),
+        url('assets/fonts/Harmond-ExtBdItaExp.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+#heroBg {
+    position: absolute;
+    width: 75vw; height: 70vh;
+    left: 50%; top: 50%;
+
+    transform: translate(-50%, -50%);
+    background-image: url('assets/images/restaurant-breakfast.jpg');
+    background-size: 100%;
+    background-position: 0%;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+    opacity: 0.5;
+    filter: grayscale(100%);
+
+    transition: 1s ease;
+
+    border-radius: 40px;
+}
+
+#heroBg:hover {
+    opacity: 0.65;
+    filter: grayscale(0%);
+}
+
+#heroBanner {
+    position: absolute;
+    width: 90%; height: 80%;
+    object-fit: cover;
+    object-position: 0px 0px;
+
+    left: 50%; top: 130vh;
+    transform: translate(-50%, 0);
+
+    border-radius: 40px;
+    opacity: 0.5;
+    filter: grayscale(100%);
+
+    z-index: 2;
+
+    transition: 1s ease;
+}
+
+#heroBanner:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+#heroTitle {
+    position: absolute;
+    left: 5vw; top: 10vh;
+
+    color: white;
+
+    font-family: 'Harmond';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    font-size: 20vh;
+}
+
+#heroTitle2 {
+    position: absolute;
+    right: 5vw; top: 33vh;
+
+    color: white;
+
+    font-family: 'Harmond';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    font-size: 15vh;
+}
+
+#heroMotto {
+    position: absolute;
+    left: 50%; top: 70%;
+    transform: translate(-50%, 0%);
+
+    font-family: 'Harmond';
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    font-size: 4vh;
+
+    color: white;
+}
+
+#scrollButton {
+    position: absolute;
+    right: 2vw; top: 65vh;
+
+    width: 50vh; height: 50vh;
+    backdrop-filter: blur(3px);
+
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition: 0.5s ease;
+}
+
+#scrollButton:hover {
+    transform: scale(0.8) rotate(15deg);
+}
+
+#scrollButton:hover > #scrollButtonHoverCircle {
+    left: 0%; top: 0%;
+}
+
+#scrollButtonHoverCircle {
+    position: absolute;
+    left: -100%; top: -100%;
+
+    width: 50vh; height: 50vh;
+    background-color: white;
+
+    border-radius: 50%;
+    pointer-events: none;
+
+    transition: 0.5s ease;
+}
+
+#scrollArrow {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 15vh;
+
+    mix-blend-mode: difference;
+}
+
+#index-intro {
+    position: absolute;
+    left: 5vw; top: 100vh;
+
+    font-family: 'Harmond';
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    font-size: 16vh;
+
+    color: white;
+}
+
+#www-Wrapper {
+    position: absolute;
+    width: 100%; height: 80%;
+    top: 210vh;
+
+    background-color: transparent;
+
+    display: flex;
+    align-items:inherit;
+    justify-content: start;
+    flex-flow: column;
+
+    padding-left: 5vw;
+}
+
+#about-button {
+    position: relative;
+    right: -45vw; top: -42vh;
+
+    width: 60%;
+}
+
+#about-button:hover {
+    cursor: pointer;
+}
+
+#www-paragraph {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+
+    color: white;
+
+    width: 40%;
+}
+
+#about-button-txt {
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+    flex-flow: column;
+
+    padding-right: 15vw;
+    gap: 0vh;
+
+    font-family: 'Harmond';
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    font-size: 9vh;
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.7s ease;
+}
+
+#abtxt-1 {
+    padding-right: 5vw;
+}
+
+#about-button:hover #about-button-txt {
+    gap: 14vh;
+}
+
+#about-button-proceed {
+    position: absolute;
+    left: 5vw; top: 18vh;
+
+    width: 44%; height: 0vh;
+    background-color: white;
+
+    border-radius: 100vh;
+    opacity: 0;
+
+    transition: 0.7s ease;
+}
+
+#about-button:hover #about-button-proceed {
+    opacity: 1;
+
+    width: 67%; height: 12vh;
+}
+
+#about-button:hover #about-proceed {
+    font-size: 5vh;
+}
+
+#about-proceed {
+    position: absolute;
+    left: 50%; top: 15%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Harmond';
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+    font-size: 0vh;
+    text-decoration: none;
+
+    color: black;
+
+    transition: 0.7s ease;
+}
+
+#impact-img {
+    position: absolute;
+    top: 270vh; left: 5vw;
+
+    border-radius: 5vh;
+    opacity: 0.5;
+    filter: grayscale(100%);
+
+    transform: scale(1.25);
+    transform-origin: top left;
+
+    transition: 1s ease;
+}
+
+#impact-img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+#impact-txt {
+    position: absolute;
+    top: 270vh; right: 5vw;
+
+    font-family: 'Harmond';
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+    font-size: 8vh;
+    text-decoration: none;
+
+    color: white;
+}
+
+#impact-paragraph {
+    position: absolute;
+    top: 285vh; right: 5vw;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 3vh;
+    font-weight: 500;
+    text-align: right;
+
+    color: white;
+
+    width: 30%;
+}
+
+#action-txt {
+    position: absolute;
+    top: 350vh; left: 50%;
+    transform: translate(-50%, 0%);
+    
+    font-family: 'Harmond';
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    font-size: 12vh;
+    text-decoration: none;
+
+    color: white;
+}
+
+#action-button {
+    position: absolute;
+    top: 375vh; left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 50vh; height: 50vh;
+    backdrop-filter: blur(3px);
+
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 50vh;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition: 0.5s ease;
+}
+
+#actionButton-hoverCircle {
+    position: absolute;
+    left: -200%; top: -400%;
+
+    width: 200vh; height: 200vh;
+    background-color: white;
+
+    border-radius: 50%;
+    pointer-events: none;
+
+    transition: 0.5s ease;
+}
+
+#action-button:hover {
+    width: 150vh;
+}
+
+#action-button:hover #actionButton-hoverCircle {
+    left: -20%; top: -50%;
+}
+
+#actionButton-txt {
+    position: absolute;
+    left: 50%; top: 28%;
+    transform: translate(-50%, -50%);
+
+    width: 120%;
+
+    font-family: 'Harmond';
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+    font-size: 5vh;
+    text-decoration: none;
+    text-align: center;
+
+    color: black;
+    opacity: 0;
+
+    transition: 0.5s ease;
+}
+
+#action-button:hover #actionButton-txt {
+    opacity: 1;
+    font-size: 12vh;
+}
