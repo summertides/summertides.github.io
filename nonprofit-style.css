@@ -204,8 +204,8 @@
 }
 
 #about-button {
-    position: relative;
-    right: -45vw; top: -42vh;
+    position: absolute;
+    right: -5vw; top: -6vh;
 
     width: 60%;
 }
@@ -254,9 +254,9 @@
 
 #about-button-proceed {
     position: absolute;
-    left: 5vw; top: 18vh;
+    left: 7vw; top: 18vh;
 
-    width: 44%; height: 0vh;
+    width: 44%; height: 4vh;
     background-color: white;
 
     border-radius: 100vh;
@@ -273,11 +273,13 @@
 
 #about-button:hover #about-proceed {
     font-size: 5vh;
+
+    opacity: 1;
 }
 
 #about-proceed {
     position: absolute;
-    left: 50%; top: 15%;
+    left: 50%; top: 12.5%;
     transform: translate(-50%, -50%);
 
     font-family: 'Harmond';
@@ -288,19 +290,21 @@
     text-decoration: none;
 
     color: black;
+    opacity: 0;
 
     transition: 0.7s ease;
 }
 
 #impact-img {
     position: absolute;
-    top: 270vh; left: 5vw;
+    width: 31.9vw; height: 43.2vh;
+    top: 265vh; left: 5vw;
 
     border-radius: 5vh;
     opacity: 0.5;
     filter: grayscale(100%);
 
-    transform: scale(1.25);
+    transform: scale(1.6);
     transform-origin: top left;
 
     transition: 1s ease;

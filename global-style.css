@@ -664,7 +664,7 @@ footer {
 
 #contact-bg {
     position: absolute;
-    left: -55%;
+    left: -40vw;
     transform: rotate(90deg) scale(0.7);
 
     filter: invert(100%);
@@ -686,107 +686,6 @@ footer {
     text-align: left;
 
     color: white;
-}
-
-:root {
-
-    --input-color: #484d5a;
-    --input-border: #CDD9ED;
-    --input-background: #fff;
-    --input-placeholder: #CBD1DC;
-
-    --input-border-focus: #ffffff;
-
-    --group-color: var(--input-color);
-    --group-border: var(--input-border);
-    --group-background: #EEF4FF;
-
-    --group-color-focus: #fff;
-    --group-border-focus: var(--input-border-focus);
-    --group-background-focus: #0d485a;
-
-}
-
-.form-field {
-    display: block;
-    width: 100%;
-    padding: 8px 16px;
-    line-height: 25px;
-    
-    font-family: 'Raleway';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    font-size: 2vh;
-    text-decoration: none;
-
-    border-radius: 6px;
-    color: var(--input-color);
-    border: 1px solid var(--input-border);
-    background: var(--input-background);
-    transition: border .3s ease;
-    &::placeholder {
-        color: var(--input-placeholder);
-    }
-    &:focus {
-        outline: none;
-        border-color: var(--input-border-focus);
-    }
-}
-
-.form-group {
-    position: absolute;
-    right: 5vw; top: 20vh;
-
-    display: flex;
-    width: 20vw;
-    & > span,
-    .form-field {
-        white-space: nowrap;
-        display: block;
-        &:not(:first-child):not(:last-child) {
-            border-radius: 0;
-        }
-        &:first-child {
-            border-radius: 6px 0 0 6px;
-        }
-        &:last-child {
-            border-radius: 0 6px 6px 0;
-        }
-        &:not(:first-child) {
-            margin-left: -1px;
-        }
-    }
-    .form-field {
-        position: relative;
-        z-index: 1;
-        flex: 1 1 auto;
-        width: 1%;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    & > span {
-        text-align: center;
-        padding: 8px 12px;
-        font-family: 'Raleway';
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-        font-size: 2vh;
-        text-decoration: none;
-        line-height: 25px;
-        color: var(--group-color);
-        background: var(--group-background);
-        border: 1px solid var(--group-border);
-        transition: background .3s ease, border .3s ease, color .3s ease;
-    }
-    &:focus-within {
-        & > span {
-            color: var(--group-color-focus);
-            background: var(--group-background-focus);
-            border-color: var(--group-border-focus);
-        }
-    }
 }
 
 #contact-btn {
