@@ -1,6 +1,23 @@
 {
+  "name": "summertides.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/summertides/summertides.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/summertides/summertides.github.io/issues"
+  },
+  "homepage": "https://github.com/summertides/summertides.github.io#readme",
   "dependencies": {
-    "locomotive-scroll": "^4.1.4",
-    "swup": "^4.5.0"
+    "locomotive-scroll": "^4.1.4"
   }
 }
