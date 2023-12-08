@@ -1,4 +1,4 @@
-import LocomotiveScroll from "../dist/locomotive-scroll.esm.87a1bdfa";
+import LocomotiveScroll from "locomotive-scroll";
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
