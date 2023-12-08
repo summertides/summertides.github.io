@@ -1,9 +1,15 @@
+/* Imports --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@600&display=swap');
+/* Kalnia, 600 */
+
+/* Meta */
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #0e0e0f;
+    background-color: #0f0e0f;
 
     height: 100vh;
     margin: 0;
@@ -14,21 +20,71 @@ section {
     height: 100vh;
 }
 
-/* INDEX PAGE */
+
+/* NAV BAR */
 nav {
     position: fixed;
     left: 50%; top: 5vh;
     transform: translate(-50%, 0);
     width: 95vw; height: 10vh;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(10px);
 
     border-radius: 2vh;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-style: solid;
+    border-width: 0.1vw;
+
     z-index: 99;
     opacity: 1;
 
+    padding: 1.6vh 1.4vh;
+
     transition: 0.5s ease;
+
+    display: flex;
+    justify-content: space-between;
 }
 
+#nav-logo {
+    position: relative;
+
+    font-family: 'Kalnia', serif;
+    font-size: 4.5vh;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+#nav-menu-button {
+    position: relative;
+
+    width: 6.5vh; height: 6.5vh;
+    background-color: white;
+
+    border-radius: 1.5vh;
+}
+
+#nav-cta {
+    position: relative;
+
+    width: 12vw; height: 6.5vh;
+    background-color: white;
+
+    border-radius: 1.5vh;
+
+    cursor: pointer;
+
+    font-family: 'Kalnia', serif;
+    font-size: 1.7vh;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+/* INDEX PAGE */
 #index1-bg {
     position: relative;
     left: 50%;
